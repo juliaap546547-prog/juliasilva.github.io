@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Extensionista – Água e Reciclagem</title>
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ceruleo: #009c8c; /* cor cerceta (verde-azulado elegante) */
+      --bg:#f4fffd;
+      --card:#ffffff;
+      --text:#07221c;
+      --muted:#5d6d66;
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter;}
+    body{background:#f3fffb;color:var(--text);overflow-x:hidden;}
+
+    /* header */
+    header{
+      position:sticky;top:0;width:100%;z-index:1000;
+      background:rgba(255,255,255,0.55);
+      backdrop-filter:blur(10px);
+      padding:16px 40px;
+      display:flex;justify-content:space-between;align-items:center;
+      border-bottom:1px solid #cfeee9;
+    }
+    header nav a{
+      margin:0 12px;text-decoration:none;font-weight:600;color:var(--text);
+      transition:.3s;
+    }
+    header nav a:hover{color:var(--ceruleo)}
+    .btn{
+      padding:10px 18px;background:var(--ceruleo);color:white;
+      border-radius:var(--radius);text-decoration:none;font-weight:700;
+      transition:0.3s;display:inline-block;
+    }
+    .btn:hover{transform:scale(1.05)}
+
+    /* hero */
+    .hero{
+      width:100%;padding:120px 40px;
+      background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200') center/cover no-repeat;
+      color:white;position:relative;
+    }
+    .hero::after{
+      content:"";position:absolute;top:0;left:0;width:100%;height:100%;
+      background:rgba(0,55,45,0.55);
+    }
+    .hero-content{
+      position:relative;z-index:2;max-width:850px;
+    }
+    .hero h1{font-size:48px;font-weight:800;margin-bottom:20px;}
+    .hero p{font-size:20px;font-weight:300;margin-bottom:28px;}
+
+    /* sections */
+    section{padding:70px 40px;max-width:1200px;margin:auto;}
+    h2{font-size:36px;margin-bottom:20px;color:var(--ceruleo);}
+    h3{font-size:26px;margin:20px 0 10px;}
+    p{margin-bottom:12px;line-height:1.6;}
+
+    .grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;
+    }
+
+    .card{
+      background:var(--card);padding:26px;border-radius:var(--radius);
+      box-shadow:0 6px 22px rgba(0,0,0,0.08);
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-6px);}    
+
+    .icone-animado{
+      width:70px;height:70px;border-radius:18px;background:var(--ceruleo);
+      display:flex;align-items:center;justify-content:center;color:white;
+      font-size:34px;margin-bottom:10px;
+      animation:pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.08)}
+      100%{transform:scale(1)}
+    }
+
+    footer{
+      background:#e7fffb;padding:40px;text-align:center;margin-top:40px;font-size:14px;color:var(--muted);
+    }
+
+    .contato-box{
+      background:white;padding:26px;border-radius:var(--radius);
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      max-width:420px;
+    }
+    input,textarea{
+      width:100%;padding:12px;border-radius:10px;border:1px solid #cfe7e3;margin-bottom:16px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="font-weight:800;font-size:20px;color:var(--ceruleo)">Projeto Água & Reciclagem</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <a class="btn" href="#contato">Fale Conosco</a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Projeto Extensionista – Água e Reciclagem</h1>
+    <p>Conectando o Campo à Sustentabilidade. Levamos soluções de saneamento rural, tratamento de água e reciclagem para produtores, promovendo saúde e qualidade de vida.</p>
+    <a class="btn" href="#solucoes">CONHECER SOLUÇÕES</a>
+  </div>
+</section>
+
+<section>
+  <h2>Por que nosso trabalho importa?</h2>
+  <p>
+    Nosso projeto extensionista atua diretamente com o produtor rural, oferecendo apoio em três pilares essenciais: tratamento de água, reciclagem e educação ambiental. A saúde do campo está totalmente conectada à qualidade de vida nas cidades — rios limpos, alimentos seguros e menos poluição começam na zona rural.
+  </p>
+</section>
+
+<!-- SOLUÇÕES -->
+<section id="solucoes">
+  <h2>Nossas Soluções</h2>
+
+  <div class="grid">
+
+    <!-- Água limpa -->
+    <div class="card">
+      <div class="icone-animado">💧</div>
+      <h3>Água Limpa</h3>
+      <p>Orientamos o produtor rural sobre técnicas simples e eficientes para garantir água segura no dia a dia.</p>
+      <h3>Água Limpa: A Base da Produção Segura</h3>
+      <p>Diagnóstico, tratamento, proteção de nascentes e uso racional da água.</p>
+    </div>
+
+    <!-- Reciclagem -->
+    <div class="card">
+      <div class="icone-animado">♻️</div>
+      <h3>Reciclagem e Resíduos</h3>
+      <p>Destinação correta de embalagens e resíduos químicos perigosos.</p>
+      <h3>Transformando Descarte em Oportunidade</h3>
+      <p>Descarte de embalagens, resíduos perigosos e compostagem.</p>
+    </div>
+
+    <!-- Educação -->
+    <div class="card">
+      <div class="icone-animado">📚</div>
+      <h3>Educação Ambiental</h3>
+      <p>Ações contínuas que promovem conscientização e sustentabilidade.</p>
+      <h3>Cultivando Consciência Sustentável</h3>
+      <p>Workshops, materiais educativos e ações comunitárias.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GESTÃO DE RESÍDUOS -->
+<section>
+  <h2>Gestão de Resíduos e Reciclagem</h2>
+  <p>Destinação correta de embalagens e resíduos químicos na propriedade rural.</p>
+
+  <h3>Descarte de Embalagens de Agrotóxicos</h3>
+  <img src="https://images.unsplash.com/photo-1529528070131-3a8b7290f28d?q=80&w=1200" style="width:100%;border-radius:var(--radius);margin:16px 0;">
+
+  <h3>Tríplice Lavagem ou Lavagem sob Pressão</h3>
+  <p>Limpeza completa para permitir reciclagem segura.</p>
+
+  <h3>Inutilização e Destinação</h3>
+  <p>Perfuração obrigatória e entrega nos postos de recebimento.</p>
+
+  <h3>Reciclagem de Outras Embalagens</h3>
+  <p>Fertilizantes, produtos veterinários, óleos e muito mais.</p>
+</section>
+
+<!-- TRATAMENTO DE ÁGUA -->
+<section>
+  <h2>Tratamento de Água em Zona Rural</h2>
+
+  <p>Garantindo saúde, segurança e qualidade de vida para a família rural.</p>
+  <h3>Diagnóstico</h3>
+  <p>Água pode conter contaminantes invisíveis.</p>
+
+  <h3>Filtração</h3>
+  <p>Filtros de areia e carvão para remoção de partículas.</p>
+
+  <h3>Cloração</h3>
+  <p>Uso correto de Hipoclorito de Sódio.</p>
+
+  <img src="https://images.unsplash.com/photo-1593946460608-2016bee11409?q=80&w=1200" style="width:100%;border-radius:var(--radius);margin-top:16px;">
+</section>
+
+<!-- EQUIPE -->
+<section id="equipe">
+  <h2>Nossa Equipe</h2>
+  <p>Projeto desenvolvido por Julia Silva, Ester Dominguети, Gabriela de Fátima, Evellyn e Pedro Henrique. Estudantes de Engenharia Agronômica – UNIS.</p>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <h2>Fale Conosco: Juntos Pela Sustentabilidade Rural</h2>
+  <p>Estamos prontos para ouvir sobre desafios da sua propriedade.</p>
+
+  <div class="grid">
+
+    <div class="contato-box">
+      <h3>Envie uma Mensagem</h3>
+
+      <input placeholder="Nome">
+      <input placeholder="E-mail">
+      <input placeholder="Assunto">
+      <textarea rows="5" placeholder="Mensagem..."></textarea>
+
+      <a class="btn" href="#">ENVIAR</a>
+    </div>
+
+    <div class="card">
+      <h3>Canais de Contato Direto</h3>
+      <p>📧 Email: falecom.projetoruralunis@gmail.com</p>
+      <p>📞 WhatsApp: (35) 99250-7246</p>
+      <p>🕗 Atendimento: Seg a Sex, 8h às 18h</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BASE EXTENSIONISTA -->
+<section>
+  <h2>Nossa Base: Conhecimento e Extensão Universitária</h2>
+  <p>Projeto baseado em ciência, sustentabilidade e compromisso institucional do UNIS.</p>
+</section>
+
+<footer>
+  "Nosso Compromisso: Nossa equipe, formada por futuros Engenheiros Agrônomos com o apoio da UNIS, tem em mente que a produção sustentável é a única forma de garantir a rentabilidade e a preservação do meio ambiente para as próximas gerações. Não apenas ensinamos; implementamos essa visão."<br><br>
+  Projeto de Extensão – Água e Reciclagem • UNIS © 2025
+</footer>
+
+</body>
+</html>
